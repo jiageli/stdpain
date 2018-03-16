@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="xin.stdpain.dao.UserMapper">   <!-- 命名空间，名字可以随意起，只要不冲突即可 -->
+	<!-- 对象映射，可以不写 -->
+	<!-- 查询功能，resultType 设置返回值类型 -->
+	<select id="findAll" resultType="xin.stdpain.pojo.User">  <!-- 书写 SQL 语句 -->
+		SELECT * FROM user
+	</select>
+	<select id="getByName" resultType="xin.stdpain.pojo.User"
+		parameterType="java.lang.String">
+		SELECT * FROM user WHERE USERNAME=#{name}
+	</select>
+	<delete id="deleteByName" parameterType="java.lang.String">
+		delete from user WHERE
+		USERNAME=#{name}
+	</delete>
+	<update id="updateByKey" parameterType="xin.stdpain.pojo.User">
+		update user
+		set username =
+		#{username,jdbcType=VARCHAR},
+		password = #{password,jdbcType=VARCHAR},
+		type = #{type,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<insert id="insert" parameterType="xin.stdpain.pojo.User">
+		insert into user (username,
+		password, createdTime,type)
+		values (#{username},
+		#{password},
+		#{createdTime},
+		#{type})
+	</insert>
+</mapper>

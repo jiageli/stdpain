@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="xin.stdpain.dao.FileMapper">   <!-- 命名空间，名字可以随意起，只要不冲突即可 -->
+    <!-- 对象映射，可以不写 -->
+    <!-- 查询功能，resultType 设置返回值类型 -->
+    <insert id="insert" parameterType="xin.stdpain.pojo.Files">
+		insert into files (id, filename, data,uploadtime)
+		values (#{id,jdbcType=INTEGER},
+		#{filename,jdbcType=VARCHAR},
+		#{data, javaType=byte[], jdbcType=BLOB, typeHandler=org.apache.ibatis.type.BlobTypeHandler},
+		#{uploadtime})
+	</insert>
+	
+	<select id="listFile" parameterType="xin.stdpain.pojo.Files" resultType="xin.stdpain.pojo.Files">
+		select id,filename,uploadtime from files
+	</select>
+	
+    <select id="getFileById" parameterType="java.lang.Integer" resultType="xin.stdpain.pojo.Files">
+    	select * from files where id=#{id}
+    </select>
+    
+    <delete id="delFileById" parameterType="java.lang.Integer">
+    	delete from files where id=#{id}
+    </delete>
+    
+</mapper>

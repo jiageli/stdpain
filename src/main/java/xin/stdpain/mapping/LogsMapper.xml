@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="xin.stdpain.dao.LogsMapper">   <!-- 命名空间，名字可以随意起，只要不冲突即可 -->
+    <!-- 对象映射，可以不写 -->
+    <!-- 查询功能，resultType 设置返回值类型 -->
+    <insert id="insert" parameterType="xin.stdpain.pojo.Logs">
+		insert into logs (author,optype,content,time)
+		values (#{author},#{optype},#{content},#{time})
+	</insert>
+    <select id="listAll" resultType="xin.stdpain.pojo.Logs">
+    	SELECT * FROM logs
+    </select>
+</mapper>
