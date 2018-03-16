@@ -29,6 +29,11 @@ public class PersonController {
     @Resource
     PersonService ps;    // 注入 service 层
 
+    @RequestMapping(value = "/jsp/all")
+    public String testforjsp(Map<String,Object> model){
+    	return "/jsp/template";
+    }
+    
     @RequestMapping(value = "/person/all")
     public String findAll(Map<String,Object> model){     // 声明 model 用来传递数据
         List<Person> personList = ps.findAll();
