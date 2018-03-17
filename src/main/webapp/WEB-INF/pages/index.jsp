@@ -6,9 +6,9 @@
 </head>
 <body>
 This is my Spring MVC!<br>
-
-<a href="${pageContext.request.contextPath}/person/all.action">显示人员列表</a>
-
-<img src="${pageContext.request.contextPath}/upload/SoCuteCat.jpg">
+<p><a href="jsp/login">Sign in</a></p>
+<p><a href="jsp/regist">Sign up</a></p>
+${msg}
+<p></p>
 </body>
 </html>

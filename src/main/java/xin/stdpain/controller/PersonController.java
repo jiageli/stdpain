@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import xin.stdpain.domain.Person;
+import xin.stdpain.pojo.User;
+import xin.stdpain.service.IUserService;
 import xin.stdpain.service.PersonService;
 
 import javax.annotation.Resource;
@@ -17,6 +19,7 @@ import javax.validation.Valid;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -28,17 +31,64 @@ import java.util.Map;
 public class PersonController {
     @Resource
     PersonService ps;    // 注入 service 层
+    @Resource
+	private IUserService userService;
 
     @RequestMapping(value = "/jsp/all")
     public String testforjsp(Map<String,Object> model){
+    	model.put("title", "mmp666");
+    	model.put("theme", "default");
     	return "/jsp/template";
+    }
+    @RequestMapping(value = "/jsp/login")
+    public String testforlogin(Map<String,Object> model){
+    	model.put("theme", "login");
+    	return "/login/login";
+    }
+    @RequestMapping(value="/jsp/regist")
+    public String testforRegist(Map<String,Object> model){
+    	model.put("theme", "login");
+    	return "/login/regist";
+    }
+    @RequestMapping(value="/user/login")
+    public String testforlogin2(HttpServletRequest request,
+            					@Valid User user,
+            					BindingResult bindingResult,
+            					Model model){
+    	model.addAttribute("theme", "login");
+    	String username = user.getUsername();
+    	User auser = userService.getByName(username);
+    	if(auser!=null&&auser.equals(user)){
+    		request.getSession().setAttribute("username",user.getUsername());
+    		return "index";
+    	}
+    	else{
+    		model.addAttribute("wrong",true);
+    		return "login/login";
+    	}
+    }
+    @RequestMapping(value="/user/manager")
+    public String testforRegest2(HttpServletRequest request,
+								@Valid User user,
+								BindingResult bindingResult,
+								Model model){
+    	model.addAttribute("theme", "login");
+    	if(userService.getByName(user.getUsername())!=null){
+    		model.addAttribute("wrong", true);
+    		return "login/regist";
+    	}
+    	else{
+    		user.setCreatedTime(new Date());
+    		user.setType("user");
+    		userService.insert(user);
+    		return "redirect:/jsp/login";
+    	}
     }
     
     @RequestMapping(value = "/person/all")
     public String findAll(Map<String,Object> model){     // 声明 model 用来传递数据
         List<Person> personList = ps.findAll();
         model.put("personList",personList);           // 通过这一步，JSP 页面就可以访问 personList
-        //model.put("wan", "FHA");
         System.out.println("personList "+personList);
         return "/person/list";                    // 跳转到 jPersonList 页面
     }

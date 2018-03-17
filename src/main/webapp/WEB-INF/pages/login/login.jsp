@@ -11,23 +11,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <jsp:include page="/WEB-INF/pages/jsp/title.jsp"></jsp:include>
+    <title>stdpain login</title>
     <base href="<%=basePath%>">
     <!-- Global stylesheets -->
     <jsp:include page="/WEB-INF/pages/jsp/globalsheet.jsp"></jsp:include>
 </head>
 <body>
-    <!-- Main navbar -->
     <jsp:include page="/WEB-INF/pages/jsp/mainnavbar.jsp"></jsp:include>
-    <!-- Page container -->
-        <!-- Page content -->
-            <!-- Main sidebar -->
-			<!-- Secondary sidebar -->
-            <!-- Main content -->
-                <!-- Page header -->
-                <!-- Content area -->
-                    <!-- Footer -->
+    <div class="page-container login-container">
+        <div class="page-content">
+            <div class="content-wrapper">
+                <div class="content">
+                    <!-- Advanced login -->
+					<jsp:include page="/WEB-INF/pages/login/forms/advanced_login.jsp"></jsp:include>
                     <jsp:include page="/WEB-INF/pages/jsp/footer.jsp"></jsp:include>
+                </div>
+            </div>
+        </div>  
+    </div>
 </body>
     <!-- Core JS files -->
     <jsp:include page="/WEB-INF/pages/jsp/corejs.jsp"></jsp:include>
