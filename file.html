@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>文件服务</title>
+
+	<link rel="stylesheet" href="assets/留言/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="assets/留言/css/style.css"> <!-- Resource style -->
+	<script src="assets/留言/js/modernizr.js"></script> <!-- Modernizr -->
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/core.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+  	    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/文件/css/default.css">
+        <link href="assets/文件/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="assets/文件/js/fileinput.js" type="text/javascript"></script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	
+
+	<!-- /theme JS files -->
+
+</head>
+
+<body class="sidebar-xs">
+	<div class="content-group-lg">
+		<div class="navbar navbar-inverse bg-slate-700 navbar-component" style="position: relative; z-index: 97;">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+					<ul class="nav navbar-nav pull-right visible-xs-block">
+						<li><a data-toggle="collapse" data-target="#navbar-navigation"><i class="icon-menu2"></i></a></li>
+					</ul>
+			</div>
+	<div class="navbar-collapse collapse" id="navbar-navigation">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">新模块</a></li>
+			<li><a href="#">我的博客</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">四六级<span class="caret"></span></a>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="#">单词库</a></li>
+					<li><a href="#">成绩查询</a></li>
+					<li><a href="#">简介</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+			<a href="file_all.html" class="dropdown-toggle" data-toggle="dropdown">文件服务<span class="caret"></span></a>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li><a href="file_all.html">所有文件</a></li>
+				<li><a href="file_me.html">我的文件</a></li>
+				<li><a href="file_search.html">文件检索</a></li>
+			</ul>
+			</li>
+		</ul>
+	<div class="navbar-collapse collapse" id="navbar-mobile">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<i class="icon-people"></i>
+			<span class="visible-xs-inline-block position-right">用户</span></a>
+				
+				
+				<div class="dropdown-menu dropdown-content">
+					<div class="dropdown-content-heading">
+							HELLO
+						<ul class="icons-list">
+							<li><a href="#"><i class="icon-gear"></i></a></li>
+						</ul>
+					</div>
+						<ul class="media-list dropdown-content-body width-300">
+						<li><a href="#"><i class="icon-user-plus"></i>个人中心</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-cog5"></i> 设置</a></li>
+						<li><a href="#"><i class="icon-switch2"></i> 注销</a></li>		
+						</ul>
+
+						<div class="dropdown-content-footer">
+							<a href="#" data-popup="tooltip" title="All users"><i class="icon-menu display-block"></i></a>
+						</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+									</div>
+								</div>
+							</div>
+
+	
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+			
+				<!-- Content area -->
+				<div class="content">
+					<!-- Bootstrap file input -->
+					<div class="panel panel-flat">
+						<div class="page-header" style="margin: 0; border-bottom: 0; background-color: #fff;">
+							<div class="page-header-content">
+								<div class="page-title">
+									<h5>
+										<i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">嗨</span> - 文件服务 -所有文件
+									</h5>
+								</div>
+
+								<ul class="breadcrumb">
+									<li class="location-text text-size-mini text-uppercase text-muted">HERE:</li>
+									<li><a href="index.html"><i class="icon-home2"></i></a></li>
+									<li><a href="主页/index.html">首页</a></li>
+									<li class="active">文件服务-所有文件</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel-heading">
+							<div class="heading-elements">
+								<ul class="icons-list">
+			                		<li><a data-action="collapse"></a></li>
+			                		<li><a data-action="reload"></a></li>
+			                		<li><a data-action="close"></a></li>
+			                	</ul>
+		                	</div>
+						</div>
+				<div class="panel-body">
+				 <header class="htmleaf-header">
+                    <h1>您可以选择你要上传的文件<span>在您上传文件之前你可以提前预览文件内容</span></h1>
+                 </header>
+           
+				<div class="htmleaf-container">
+                  <div class="container kv-main">
+                   
+                    <form enctype="multipart/form-data">
+                      
+                        <div class="form-group">
+                            <input id="file-4" type="file" class="file" data-upload-url="#">
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <button class="btn btn-warning" type="button">Disable Test</button>
+                            <button class="btn btn-info" type="reset">Refresh Test</button>
+                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-default" type="reset">Reset</button>
+                        </div>
+                    </form>
+					</div>
+				</div>
+<div class="cd-testimonials-wrapper cd-container">
+	<ul class="cd-testimonials">
+		<li>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="cd-author">
+				<img src="assets/留言/img/avatar-1.jpg" alt="Author image">
+				<ul class="cd-author-info">
+					<li>MyName</li>
+					<li>CEO, AmberCreative</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ea, perferendis error repudiandae numquam dolor fuga temporibus. Unde omnis, consequuntur.</p>
+			<div class="cd-author">
+				<img src="assets/留言/img/avatar-2.jpg" alt="Author image">
+				<ul class="cd-author-info">
+					<li>MyName</li>
+					<li>Designer, CodyHouse</li>
+				</ul>
+			</div>
+		</li>
+
+		<li>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam nulla est, illo molestiae maxime officiis, quae ad, ipsum vitae deserunt molestias eius alias.</p>
+			<div class="cd-author">
+				<img src="assets/留言/img/avatar-3.jpg" alt="Author image">
+				<ul class="cd-author-info">
+					<li>MyName</li>
+					<li>CEO, CompanyName</li>
+				</ul>
+			</div>
+		</li>
+		
+	</ul> <!-- cd-testimonials -->
+
+	<a href="#0" class="cd-see-all">See all</a>
+</div> <!-- cd-testimonials-wrapper -->
+
+<div class="cd-testimonials-all">
+	<div class="cd-testimonials-all-wrapper">
+		<ul>
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-1.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nostrum nisi, doloremque error hic nam nemo doloribus porro impedit perferendis. Tempora, distinctio hic suscipit. At ullam eaque atque recusandae modi fugiat voluptatem laborum laboriosam rerum, consequatur reprehenderit omnis, enim pariatur nam, quidem, quas vel reiciendis aspernatur consequuntur. Commodi quasi enim, nisi alias fugit architecto, doloremque, eligendi quam autem exercitationem consectetur.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-2.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quibusdam eveniet, molestiae laborum voluptatibus minima hic quasi accusamus ut facere, eius expedita, voluptatem? Repellat incidunt veniam quaerat, qui laboriosam dicta. Quidem ducimus laudantium dolorum enim qui at ipsum, a error.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-3.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptates officiis tempore quae officia! Beatae quia deleniti cum corporis eos perferendis libero reiciendis nemo iusto accusamus, debitis tempora voluptas praesentium repudiandae laboriosam excepturi laborum, nisi optio repellat explicabo, incidunt ex numquam. Ullam perferendis officiis harum doloribus quae corrupti minima quia, aliquam nostrum expedita pariatur maxime repellat, voluptas sunt unde, inventore.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-4.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit totam saepe iste maiores neque animi molestias nihil illum nisi temporibus.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-5.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quia quas, quis illo adipisci voluptate ex harum iste commodi nulla dolor. Eius ratione quod ab!</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-6.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dignissimos iure rem fugiat consequuntur officiis.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-1.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-2.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iusto sapiente, excepturi velit, beatae possimus est tenetur cumque fugit tempore dolore fugiat! Recusandae, vel suscipit? Perspiciatis non similique sint suscipit officia illo, accusamus dolorum, voluptate vitae quia ea amet optio magni voluptatem nemo, natus nihil.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-3.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quasi officiis pariatur, fugit minus omnis animi ut assumenda quod commodi, ad a alias maxime unde suscipit magnam, voluptas laboriosam ipsam quibusdam quidem, dolorem deleniti id.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-4.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus tempora necessitatibus reiciendis provident deserunt maxime sit id. Dicta aut voluptatibus placeat quibusdam vel, dolore.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-5.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+
+			<li class="cd-testimonials-item">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tempore ipsam, eos suscipit nostrum molestias reprehenderit, rerum amet cum similique a, ipsum soluta delectus explicabo nihil repellat incidunt! Minima magni possimus mollitia deserunt facere, tempore earum modi, ea ipsa dicta temporibus suscipit quidem ut quibusdam vero voluptatibus nostrum excepturi explicabo nulla harum, molestiae alias. Ab, quidem rem fugit delectus quod.</p>
+				
+				<div class="cd-author">
+					<img src="assets/留言/img/avatar-6.jpg" alt="Author image">
+					<ul class="cd-author-info">
+						<li>MyName</li>
+						<li>CEO, CompanyName</li>
+					</ul>
+				</div> <!-- cd-author -->
+			</li>
+		</ul>
+	</div>	<!-- cd-testimonials-all-wrapper -->
+
+	<a href="#0" class="close-btn">Close</a>
+</div> <!-- cd-testimonials-all -->
+<script src="assets/留言/js/jquery-2.1.0.min.js"></script>
+<script src="assets/留言/js/masonry.pkgd.min.js"></script>
+<script src="assets/留言/js/jquery.flexslider-min.js"></script>
+<script src="assets/留言/js/main.js"></script> <!-- Resource jQuery -->
+						
+						
+						<div class="col-lg-12">
+							<!-- Comments -->
+							<div class="panel panel-flat">
+								<div class="panel-body">	
+									<div class="text-right">
+										<button type="button" class="btn bg-blue"><i class="icon-plus22"></i> Add your comment</button>
+									</div>
+								</div>
+							</div>
+							<!-- /comments -->
+						</div>
+					</div>
+				</div>
+					<!-- /detailed task -->
+								
+						
+						</div>
+
+						
+					</div>
+						
+						
+					</div>
+				
+
+
+					<!-- Footer -->
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	
+	<!-- /page container -->
+
+</body>
+<script>
+    $('#file-zh').fileinput({
+        language: 'zh',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+    $('#file-zh-TW').fileinput({
+        language: 'zh-TW',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+    $("#file-0").fileinput({
+        'allowedFileExtensions' : ['jpg', 'png','gif'],
+    });
+    $("#file-1").fileinput({
+        uploadUrl: '#', // you must set a valid URL here else you will get an error
+        allowedFileExtensions : ['jpg', 'png','gif'],
+        overwriteInitial: false,
+        maxFileSize: 1000,
+        maxFilesNum: 10,
+        //allowedFileTypes: ['image', 'video', 'flash'],
+        slugCallback: function(filename) {
+            return filename.replace('(', '_').replace(']', '_');
+        }
+	});
+    /*
+    $(".file").on('fileselect', function(event, n, l) {
+        alert('File Selected. Name: ' + l + ', Num: ' + n);
+    });
+    */
+	$("#file-3").fileinput({
+		showUpload: false,
+		showCaption: false,
+		browseClass: "btn btn-primary btn-lg",
+		fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>"
+	});
+	$("#file-4").fileinput({
+		uploadExtraData: {kvId: '10'}
+	});
+    $(".btn-warning").on('click', function() {
+        if ($('#file-4').attr('disabled')) {
+            $('#file-4').fileinput('enable');
+        } else {
+            $('#file-4').fileinput('disable');
+        }
+    });    
+    $(".btn-info").on('click', function() {
+        $('#file-4').fileinput('refresh', {previewClass:'bg-info'});
+    });
+    /*
+    $('#file-4').on('fileselectnone', function() {
+        alert('Huh! You selected no files.');
+    });
+    $('#file-4').on('filebrowse', function() {
+        alert('File browse clicked for #file-4');
+    });
+    */
+    $(document).ready(function() {
+        $("#test-upload").fileinput({
+            'showPreview' : false,
+            'allowedFileExtensions' : ['jpg', 'png','gif'],
+            'elErrorContainer': '#errorBlock'
+        });
+        /*
+        $("#test-upload").on('fileloaded', function(event, file, previewId, index) {
+            alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
+        });
+        */
+    });
+	</script>
+</html>
